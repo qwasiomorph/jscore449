@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "7a87d430-1937-4200-8315-eee202d3ae6e",
+		"name": "JSCore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21001080",
+		"_collection_link": "https://dark-sunset-638264.postman.co/workspace/dark-sunset-638264-Workspace~e70df260-7f31-4fdb-8cce-b634a593bfae/collection/21001080-7a87d430-1937-4200-8315-eee202d3ae6e?action=share&creator=21001080&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"username\": \"Bogdan\",\r\n        \"email\": \"boggdan56@gmail.com\",\r\n        \"password\": \"645978312nadgod\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/users",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": {\r\n        \"email\": \"boggdan56@gmail.com\",\r\n        \"password\": \"645978312nadgod\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://blog.kata.academy/api/users/login",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YTEyZWY1NjBjNjc1MWIwMGI3OGJjOSIsInVzZXJuYW1lIjoiYm9nZGFuIiwiZXhwIjoxNjkzNDY5MTgzLCJpYXQiOjE2ODgyODUxODN9.tqIrVcsoqx8ZkJ_suoUFN97tJQ07T5LROhEh_oZa1Fk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blog.kata.academy/api/user",
+					"protocol": "https",
+					"host": [
+						"blog",
+						"kata",
+						"academy"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
